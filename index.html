@@ -1,139 +1,229 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="uk">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Кафе "Господиня" - Софіївка</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Кафе «Господиня» — Традиційна кухня у Софіївці</title>
+    <!-- Шрифти -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Montserrat:wght@300;400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Caveat:wght@700&family=Montserrat:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Екран завантаження -->
+    <div class="loader" id="loader">
+      <div class="loader-content">Готуємо з любов'ю...</div>
+    </div>
+
+    <!-- Шапка сайту -->
     <header>
-      <div class="container">
-        <div class="logo">ГОСПОДИНЯ</div>
+      <div class="container nav-container">
+        <div class="logo">Г<span>осподин</span>я</div>
         <nav>
           <ul class="nav-links">
-            <li><a href="#hero">Головна</a></li>
             <li><a href="#about">Про нас</a></li>
             <li><a href="#menu">Меню</a></li>
             <li><a href="#contact">Контакти</a></li>
           </ul>
         </nav>
+        <a href="tel:+380963890958" class="phone-btn">📞 +380963890958</a>
       </div>
     </header>
 
-    <section id="hero" class="hero">
-      <div class="hero-content">
-        <h1>Традиційна українська кухня</h1>
-        <p>Смак домашнього затишку в селі Софіївка</p>
-        <a href="#menu" class="btn">Переглянути меню</a>
+    <!-- Головний блок -->
+    <section class="hero" id="hero">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <h1 class="reveal">Смак рідного дому</h1>
+        <p class="reveal">Домашня українська кухня у селі Софіївка</p>
+        <a href="#menu" class="btn-main reveal">Переглянути меню</a>
       </div>
     </section>
 
-    <!-- Новий розділ: Про нас -->
-    <section id="about" class="about-section">
-      <div class="container">
-        <div class="about-wrapper">
-          <div class="about-text">
-            <h2 class="section-title">Про кафе «Господиня»</h2>
-            <p>
-              Кафе «Господиня» — це затишне місце домашньої української кухні,
-              де кожен гість може відчути смак справжніх традиційних страв. У
-              нашому меню — ароматний борщ, солянка, бограч, вареники, пельмені,
-              домашні котлети, гуляш та інші улюблені страви, приготовані з
-              душею та за домашніми рецептами.
-            </p>
-            <p>
-              Ми поєднуємо щедрі порції, свіжі продукти та теплу атмосферу, щоб
-              кожен відвідувач почувався як удома. У «Господині» можна смачно
-              поснідати, пообідати всією родиною або просто насолодитися
-              традиційною українською кухнею у приємній атмосфері.
-            </p>
-          </div>
-          <div class="about-img">
-            <img
-              src="https://images.unsplash.com/photo-1528605248644-14dd04322a11?auto=format&fit=crop&w=800&q=80"
-              alt="Українська кухня"
-            />
-          </div>
+    <!-- Про нас -->
+    <section id="about" class="about">
+      <div class="container about-grid">
+        <div class="about-img reveal-left">
+          <img src="./photo-menu/Ukr-food.jpeg" alt="Інтер'єр" />
+          <div class="floating-badge">Свіжі продукти</div>
         </div>
-      </div>
-    </section>
-
-    <section id="menu" class="menu-section">
-      <div class="container">
-        <h2 class="section-title">Наше Меню</h2>
-
-        <div class="menu-grid">
-          <!-- ПЕРШІ СТРАВИ -->
-          <div class="menu-card">
-            <h3>Перші страви</h3>
-            <ul>
-              <li><span>Борщ (400 г)</span> <span>80.00</span></li>
-              <li><span>Суп (400 г)</span> <span>50.00</span></li>
-              <li><span>Солянка (400 г)</span> <span>90.00</span></li>
-              <li><span>Бограч (400 г)</span> <span>120.00</span></li>
-            </ul>
-          </div>
-
-          <!-- ОСНОВНІ СТРАВИ -->
-          <div class="menu-card">
-            <h3>Основні страви</h3>
-            <ul>
-              <li><span>Гуляш</span> <span>80.00</span></li>
-              <li><span>Відбивна</span> <span>80.00</span></li>
-              <li><span>Котлета</span> <span>50.00</span></li>
-              <li><span>Печеня у горщику</span> <span>100.00</span></li>
-              <li><span>Підчеревина (за 100г)</span> <span>70.00</span></li>
-            </ul>
-          </div>
-
-          <!-- СТРАВИ З ТІСТА -->
-          <div class="menu-card">
-            <h3>Страви з тіста</h3>
-            <ul>
-              <li><span>Пельмені варені</span> <span>90.00</span></li>
-              <li><span>Пельмені запечені</span> <span>100.00</span></li>
-              <li><span>Вареники з м'ясом</span> <span>100.00</span></li>
-              <li><span>Вареники з картоплею</span> <span>80.00</span></li>
-              <li><span>Вареники з капустою</span> <span>80.00</span></li>
-            </ul>
-          </div>
-
-          <!-- САЛАТИ ТА ГАРНІРИ -->
-          <div class="menu-card">
-            <h3>Салати та Гарніри</h3>
-            <ul>
-              <li><span>Салат Весняний</span> <span>60.00</span></li>
-              <li><span>Салат із капусти</span> <span>30.00</span></li>
-              <li><span>Олів'є</span> <span>60.00</span></li>
-              <li><span>Картопля фрі</span> <span>60.00</span></li>
-              <li><span>Пюре картопляне</span> <span>40.00</span></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="contact-section">
-      <div class="container">
-        <h2 class="section-title">Контакти</h2>
-        <div class="contact-info">
-          <p>📍 с. Софіївка, Золотоніський район, Черкаська область</p>
-          <p>📞 <a href="tel:+380963890958">+38 (096) 389 09 58</a></p>
+        <div class="about-text reveal-right">
+          <h2 class="handwritten">Про кафе «Господиня»</h2>
           <p>
-            ✉️
-            <a href="mailto:bikovarisale@gmail.com">bikovarisale@gmail.com</a>
+            Кафе «Господиня» — це затишне місце домашньої української кухні, де
+            кожен гість може відчути смак справжніх традиційних страв. У нашому
+            меню — ароматний борщ, солянка, бограч, вареники, пельмені та інші
+            улюблені страви.
+          </p>
+          <p>
+            Ми поєднуємо щедрі порції та теплу атмосферу, щоб кожен відвідувач
+            почувався як удома. Завітайте до нас на смачний обід усією родиною!
           </p>
         </div>
       </div>
     </section>
 
+    <!-- Меню -->
+    <section id="menu" class="menu">
+      <div class="container">
+        <h2 class="section-title">Наше Смачне Меню</h2>
+
+        <div class="menu-tabs">
+          <button class="tab-btn active" data-filter="all">Усе меню</button>
+          <button class="tab-btn" data-filter="first">Перші страви</button>
+          <button class="tab-btn" data-filter="main">Основні та Тісто</button>
+          <button class="tab-btn" data-filter="salads">
+            Салати та Гарніри
+          </button>
+          <button class="tab-btn" data-filter="other">Сніданки та Напої</button>
+        </div>
+
+        <div class="menu-grid">
+          <!-- ПЕРШІ СТРАВИ -->
+          <div class="menu-card first">
+            <img
+              src="https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=400&q=80"
+              alt="Борщ"
+            />
+            <div class="card-body">
+              <h3>Борщ</h3>
+              <p>400 г</p>
+              <div class="price">80.00 грн</div>
+            </div>
+          </div>
+          <div class="menu-card first">
+            <img src="./photo-menu/bograch.jpeg" alt="Бограч" />
+            <div class="card-body">
+              <h3>Бограч</h3>
+              <p>400 г</p>
+              <div class="price">120.00 грн</div>
+            </div>
+          </div>
+          <div class="menu-card first">
+            <img src="./photo-menu/solyanka.jpeg" alt="Солянка" />
+            <div class="card-body">
+              <h3>Солянка</h3>
+              <p>400 г</p>
+              <div class="price">90.00 грн</div>
+            </div>
+          </div>
+
+          <!-- ОСНОВНІ ТА ТІСТО -->
+          <div class="menu-card main">
+            <img src="./photo-menu/varenyky.jpeg" alt="Вареники" />
+            <div class="card-body">
+              <h3>Вареники з м'ясом</h3>
+              <p>Домашні</p>
+              <div class="price">100.00 грн</div>
+            </div>
+          </div>
+          <div class="menu-card main">
+            <img
+              src="https://images.unsplash.com/photo-1603360946369-dc9bb6258143?auto=format&fit=crop&w=400&q=80"
+              alt="Відбивна"
+            />
+            <div class="card-body">
+              <h3>Відбивна</h3>
+              <p>Соковита свинина</p>
+              <div class="price">80.00 грн</div>
+            </div>
+          </div>
+          <div class="menu-card main">
+            <img
+              src="https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?auto=format&fit=crop&w=400&q=80"
+              alt="Печеня"
+            />
+            <div class="card-body">
+              <h3>Печеня у горщику</h3>
+              <p>Традиційна</p>
+              <div class="price">100.00 грн</div>
+            </div>
+          </div>
+          <div class="menu-card main">
+            <img src="./photo-menu/pelmeny.jpeg" alt="Пельмені" />
+            <div class="card-body">
+              <h3>Пельмені запечені</h3>
+              <p>Зі сметаною</p>
+              <div class="price">100.00 грн</div>
+            </div>
+          </div>
+
+          <!-- САЛАТИ ТА ГАРНІРИ -->
+          <div class="menu-card salads">
+            <img
+              src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=400&q=80"
+              alt="Салат"
+            />
+            <div class="card-body">
+              <h3>Салат "Весняний"</h3>
+              <p>Свіжі овочі</p>
+              <div class="price">60.00 грн</div>
+            </div>
+          </div>
+          <div class="menu-card salads">
+            <img src="./photo-menu/fry.jpeg" alt="Картопля" />
+            <div class="card-body">
+              <h3>Картопля фрі</h3>
+              <p>Хрустка</p>
+              <div class="price">60.00 грн</div>
+            </div>
+          </div>
+          <div class="menu-card salads">
+            <img src="./photo-menu/pure.jpeg" alt="Пюре" />
+            <div class="card-body">
+              <h3>Пюре картопляне</h3>
+              <p>На маслі</p>
+              <div class="price">40.00 грн</div>
+            </div>
+          </div>
+
+          <!-- СНІДАНКИ ТА НАПОЇ -->
+          <div class="menu-card other">
+            <img
+              src="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=400&q=80"
+              alt="Яєчня"
+            />
+            <div class="card-body">
+              <h3>Яєчня з шинкою</h3>
+              <p>2 яйця</p>
+              <div class="price">70.00 грн</div>
+            </div>
+          </div>
+          <div class="menu-card other">
+            <img src="./photo-menu/pancake.jpeg" alt="Млинці" />
+            <div class="card-body">
+              <h3>Млинці з сиром</h3>
+              <p>Зі сметаною</p>
+              <div class="price">60.00 грн</div>
+            </div>
+          </div>
+          <div class="menu-card other">
+            <img src="./photo-menu/juis.jpeg" alt="Напої" />
+            <div class="card-body">
+              <h3>Напої (Pepsi/Сік)</h3>
+              <p>В асортименті</p>
+              <div class="price">від 40 грн</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Контакти -->
+    <section id="contact" class="contact">
+      <div class="container contact-box reveal">
+        <h2 class="handwritten">Завітайте в гості</h2>
+        <p>📍 с. Софіївка, Золотоніський р-н, Черкаська обл.</p>
+        <p>📞 <a href="tel:+380963890958">+38 (096) 389 09 58</a></p>
+        <p>✉️ bikovarisale@gmail.com</p>
+        <div class="ornament"></div>
+      </div>
+    </section>
+
     <footer>
-      <p>&copy; 2024 Кафе "Господиня". Ласкаво просимо!</p>
+      <p>© 2024 Кафе «Господиня». Смачного та затишного відпочинку!</p>
     </footer>
 
     <script src="script.js"></script>
